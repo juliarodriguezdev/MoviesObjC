@@ -12,7 +12,7 @@
 
 static NSString * const baseURLString = @"https://api.themoviedb.org/3/";
 static NSString * const search = @"search";
-static NSString * const movie = @"movie";
+static NSString * const movieString = @"movie";
 static NSString * const apiKeyString = @"api_key";
 static NSString * const apiKey = @"a5cd402718fc47c098a296dd7eb9c4dd";
 
@@ -37,7 +37,7 @@ static NSString * const apiKey = @"a5cd402718fc47c098a296dd7eb9c4dd";
     // constructing URL
     // final url: https://api.themoviedb.org/3/search/movie?api_key=a5cd402718fc47c098a296dd7eb9c4dd&query=Spiderman
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
-    NSURL *movieURL = [[baseURL URLByAppendingPathComponent:search] URLByAppendingPathComponent:movie];
+    NSURL *movieURL = [[baseURL URLByAppendingPathComponent:search] URLByAppendingPathComponent:movieString];
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:movieURL resolvingAgainstBaseURL:true];
     
     // Add query items, info after ?
@@ -73,7 +73,6 @@ static NSString * const apiKey = @"a5cd402718fc47c098a296dd7eb9c4dd";
            NSDictionary *secondLevelDict = topLevelDictionary[@"results"];
               
               // Temporary array to store movie dictionaries
-          
               NSMutableArray *moviesArray = [NSMutableArray new];
               
               //for a moviesDictionary in topLevelDictionary

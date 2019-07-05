@@ -12,7 +12,13 @@ class JJRTableViewController: UITableViewController {
     
     @IBOutlet weak var movieSearchBar: UISearchBar!
     
-    var movie: [JJRMovie] = []
+    var movie: [JJRMovie] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +42,6 @@ class JJRTableViewController: UITableViewController {
         cell.titleLabel.text = movieItem.title
         cell.ratingLabel.text = "Rating: \(movieItem.rating)"
         cell.overViewLabel.text = movieItem.overview
-        
     
         return cell
     }
@@ -55,7 +60,8 @@ class JJRTableViewController: UITableViewController {
 
 extension JJRTableViewController: UISearchBarDelegate {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // unwrap user movie search term
         guard let movieSearchInput = searchBar.text, movieSearchInput != "" else { return }
         

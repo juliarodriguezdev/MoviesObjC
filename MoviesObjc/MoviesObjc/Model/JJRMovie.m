@@ -20,7 +20,7 @@ static NSString * const overviewKey = @"overview";
 {
     self = [super init];
     if (self) {
-        _tite = title;
+        _title = title;
         _overview = overview;
         _rating = rating;
     }

@@ -13,6 +13,9 @@
 		6ABA8A5E22CF9FE400F3300E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA8A5C22CF9FE400F3300E /* LaunchScreen.storyboard */; };
 		6ABA8A6122CF9FE400F3300E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A6022CF9FE400F3300E /* main.m */; };
 		6ABA8A6E22CFA79300F3300E /* JJRMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A6D22CFA79300F3300E /* JJRMovie.m */; };
+		6ABA8A7122CFAC0E00F3300E /* JJRMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A7022CFAC0E00F3300E /* JJRMovieController.m */; };
+		6ABA8A7422CFB8E900F3300E /* JJRTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A7322CFB8E900F3300E /* JJRTableViewController.swift */; };
+		6ABA8A7622CFB8FB00F3300E /* JJRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A7522CFB8FB00F3300E /* JJRTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		6ABA8A6022CF9FE400F3300E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6ABA8A6C22CFA79300F3300E /* JJRMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJRMovie.h; sourceTree = "<group>"; };
 		6ABA8A6D22CFA79300F3300E /* JJRMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJRMovie.m; sourceTree = "<group>"; };
+		6ABA8A6F22CFAC0E00F3300E /* JJRMovieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJRMovieController.h; sourceTree = "<group>"; };
+		6ABA8A7022CFAC0E00F3300E /* JJRMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJRMovieController.m; sourceTree = "<group>"; };
+		6ABA8A7222CFB8E800F3300E /* MoviesObjc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoviesObjc-Bridging-Header.h"; sourceTree = "<group>"; };
+		6ABA8A7322CFB8E900F3300E /* JJRTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJRTableViewController.swift; sourceTree = "<group>"; };
+		6ABA8A7522CFB8FB00F3300E /* JJRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJRTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,8 @@
 		6ABA8A6922CFA00F00F3300E /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6ABA8A6F22CFAC0E00F3300E /* JJRMovieController.h */,
+				6ABA8A7022CFAC0E00F3300E /* JJRMovieController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -100,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6ABA8A5722CF9FE200F3300E /* Main.storyboard */,
+				6ABA8A7522CFB8FB00F3300E /* JJRTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -107,6 +118,8 @@
 		6ABA8A6B22CFA02200F3300E /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6ABA8A7322CFB8E900F3300E /* JJRTableViewController.swift */,
+				6ABA8A7222CFB8E800F3300E /* MoviesObjc-Bridging-Header.h */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -143,6 +156,7 @@
 				TargetAttributes = {
 					6ABA8A4D22CF9FE200F3300E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -183,8 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ABA8A6E22CFA79300F3300E /* JJRMovie.m in Sources */,
+				6ABA8A7122CFAC0E00F3300E /* JJRMovieController.m in Sources */,
 				6ABA8A6122CF9FE400F3300E /* main.m in Sources */,
 				6ABA8A5322CF9FE200F3300E /* AppDelegate.m in Sources */,
+				6ABA8A7622CFB8FB00F3300E /* JJRTableViewCell.swift in Sources */,
+				6ABA8A7422CFB8E900F3300E /* JJRTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 899TSM5Z6B;
 				INFOPLIST_FILE = "$(SRCROOT)/MoviesObjc/Resources/Info.plist";
@@ -335,6 +353,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MoviesObjc.MoviesObjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoviesObjc/View Controller/MoviesObjc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -343,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 899TSM5Z6B;
 				INFOPLIST_FILE = "$(SRCROOT)/MoviesObjc/Resources/Info.plist";
@@ -352,6 +374,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MoviesObjc.MoviesObjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoviesObjc/View Controller/MoviesObjc-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

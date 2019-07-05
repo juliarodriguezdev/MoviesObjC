@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // class properties
 
-@property (nonatomic, copy, readonly) NSString *tite;
+@property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, copy, readonly) NSString *overview;
 @property (nonatomic, readonly) double rating;
 

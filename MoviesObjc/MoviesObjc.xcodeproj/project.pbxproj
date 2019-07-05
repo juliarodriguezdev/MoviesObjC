@@ -12,6 +12,7 @@
 		6ABA8A5B22CF9FE400F3300E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA8A5A22CF9FE400F3300E /* Assets.xcassets */; };
 		6ABA8A5E22CF9FE400F3300E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA8A5C22CF9FE400F3300E /* LaunchScreen.storyboard */; };
 		6ABA8A6122CF9FE400F3300E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A6022CF9FE400F3300E /* main.m */; };
+		6ABA8A6E22CFA79300F3300E /* JJRMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA8A6D22CFA79300F3300E /* JJRMovie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		6ABA8A5D22CF9FE400F3300E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ABA8A5F22CF9FE400F3300E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABA8A6022CF9FE400F3300E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6ABA8A6C22CFA79300F3300E /* JJRMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJRMovie.h; sourceTree = "<group>"; };
+		6ABA8A6D22CFA79300F3300E /* JJRMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJRMovie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 		6ABA8A6822CFA00900F3300E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6ABA8A6C22CFA79300F3300E /* JJRMovie.h */,
+				6ABA8A6D22CFA79300F3300E /* JJRMovie.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		6ABA8A4622CF9FE200F3300E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JJR;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Julia Rodriguez";
 				TargetAttributes = {
@@ -176,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABA8A6E22CFA79300F3300E /* JJRMovie.m in Sources */,
 				6ABA8A6122CF9FE400F3300E /* main.m in Sources */,
 				6ABA8A5322CF9FE200F3300E /* AppDelegate.m in Sources */,
 			);
